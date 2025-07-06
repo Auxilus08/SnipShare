@@ -1,91 +1,84 @@
 # SnipShare
 
-A modern code snippet sharing platform. Share code with output and syntax highlighting with ease.
+SnipShare is a lightweight web application for capturing, sharing, and managing code snippets with ease. Ideal for developers looking to quickly save and share snippets across teams or projects.
 
 ## Features
-- **Authentication**: Sign in with Google or GitHub (via Firebase Auth)
-- **Create & Share Snippets**: Write, run, and share code snippets in JavaScript, Python, Java, and C++
-- **Syntax Highlighting**: Monaco Editor and Prism for beautiful code display
-- **Run Code**: Execute code snippets using the [Piston API](https://emkc.org/api/v2/piston/execute)
-- **User Dashboard**: View, manage, and delete your snippets
-- **Demo Functionality**: Interactive demo page showcasing platform features with pre-created examples
-- **Responsive UI**: Built with Next.js App Router and Tailwind CSS
-- **Theming**: Light/dark mode support
+
+- Create and share code snippets via unique URLs  
+- Organized snippet history dashboard  
+- Syntax highlighting for popular languages  
+- Copy-to-clipboard support  
+- (Optional) Authentication for private snippet management  
 
 ## Tech Stack
-- [Next.js 14 (App Router)](https://nextjs.org/)
-- [React 18](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Firebase (Auth, Firestore)](https://firebase.google.com/)
-- [Monaco Editor](https://microsoft.github.io/monaco-editor/)
-- [Piston API](https://emkc.org/api/v2/piston/execute) for code execution
 
-## Getting Started
+- **Backend**: Node.js with Express  
+- **Frontend**: React.js + Tailwind CSS  
+- **Database**: MongoDB  
+- **Syntax Highlighting**: Prism.js  
+- **Environment**: dotenv  
 
-### Prerequisites
-- Node.js 18+
-- npm or pnpm (choose one, do not use both lockfiles)
+## Setup & Installation
 
-### Installation
-1. Clone the repository:
-   ```sh
+1. **Clone the repo:**
+
+   ```bash
    git clone https://github.com/Auxilus08/SnipShare.git
    cd SnipShare
    ```
-2. Install dependencies:
-   ```sh
+
+2. **Install dependencies:**
+
+   ```bash
    npm install
-   # or
-   pnpm install
-   ```
-3. Copy `.env.example` to `.env.local` and fill in your Firebase credentials:
-   ```sh
-   cp .env.example .env.local
    ```
 
-### Required Environment Variables
-These are used in `lib/firebase.js`:
-```
-NEXT_PUBLIC_FIREBASE_API_KEY=
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-NEXT_PUBLIC_FIREBASE_APP_ID=
-NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=
-```
+3. **Environment variables:**
 
-### Running the App
-```sh
-npm run dev
-# or
-pnpm dev
-```
-Visit [http://localhost:3000](http://localhost:3000) in your browser.
+   Copy `.env.example` to `.env` and fill in values:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+4. **Run the app:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser at `http://localhost:3000`
 
 ## Usage
-- **Sign in** with Google or GitHub
-- **View demos** to explore platform features
-- **Create a new snippet** from the dashboard
-- **Write and run code** in supported languages
-- **Share your snippet** with others
-- **Manage your snippets** from your profile
 
-## Demo Functionality
+1. Write or paste your code snippet in the editor.  
+2. Select the language for syntax highlighting.  
+3. Click **Save** to generate a shareable link.  
+4. View and manage existing snippets in your personal dashboard.
 
-SnipShare includes a comprehensive demo system to showcase platform features:
+## Project Structure
 
-- **Demo Page** (`/demo`): Interactive gallery of demo snippets
-- **Demo Snippets**: Pre-created examples in JavaScript, Python, Java, and C++
-- **Admin Interface** (`/admin/demo`): Easy management of demo content
-- **API Endpoint** (`/api/demo`): Server-side demo snippet creation
+```
+project-root/
+├── backend/                
+├── frontend/               
+├── database/               
+├── .env.example            
+├── LICENSE                 
+├── CONTRIBUTING.md         
+└── README.md               
+```
 
-For detailed documentation, see [DEMO_FUNCTIONALITY.md](./DEMO_FUNCTIONALITY.md).
+## License
 
-## Authentication Callback URLs
-- For Firebase Auth with Google/GitHub, set the callback/redirect URL to:
-  - `http://localhost:3000/` (for local development)
-  - Or your deployed domain root
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
-## Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+## Contact
+
+Created by [Auxilus08].  
+For questions or feedback, open an issue or contact me at: example@domain.com
+
+## Badges
+
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)  
+![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
