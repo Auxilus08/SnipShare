@@ -12,13 +12,13 @@ A modern code snippet sharing platform that makes sharing code with syntax highl
 
 - Authentication: Secure sign-in with Google or GitHub via Firebase Auth
 - Create & Share Snippets: Write, run, and share code snippets seamlessly
-- ** Syntax Highlighting**: Beautiful code display with Monaco Editor and Prism
-- ** Code Execution**: Run code snippets in real-time using the Piston API
-- ** User Dashboard**: Comprehensive snippet management interface
-- ** Demo Functionality**: Interactive demo page with pre-created examples
-- ** Responsive Design**: Optimized for all devices with modern UI
-- ** Theming**: Light/dark mode support for comfortable coding
-- ** Performance**: Built with Next.js App Router for optimal performance
+- Syntax Highlighting: Beautiful code display with Monaco Editor and Prism
+- Code Execution: Run code snippets in real-time using the Piston API
+- User Dashboard: Comprehensive snippet management interface
+- Demo Functionality: Interactive demo page with pre-created examples
+- Responsive Design: Optimized for all devices with modern UI
+- Theming: Light/dark mode support for comfortable coding
+- Performance: Built with Next.js App Router for optimal performance
 
 ### Supported Languages
 - JavaScript
