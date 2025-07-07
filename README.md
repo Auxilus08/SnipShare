@@ -10,8 +10,8 @@ A modern code snippet sharing platform that makes sharing code with syntax highl
 
 ## Features
 
-- ** Authentication**: Secure sign-in with Google or GitHub via Firebase Auth
-- ** Create & Share Snippets**: Write, run, and share code snippets seamlessly
+- Authentication: Secure sign-in with Google or GitHub via Firebase Auth
+- Create & Share Snippets: Write, run, and share code snippets seamlessly
 - ** Syntax Highlighting**: Beautiful code display with Monaco Editor and Prism
 - ** Code Execution**: Run code snippets in real-time using the Piston API
 - ** User Dashboard**: Comprehensive snippet management interface
