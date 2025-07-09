@@ -30,7 +30,7 @@ This project and everyone participating in it is governed by our commitment to p
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/your-username/SnipShare.git
+   git clone https://github.com/Auxilus08/SnipShare.git
    cd SnipShare
    ```
 3. **Set up the upstream remote**:
@@ -146,13 +146,6 @@ Examples:
 - Use **semantic HTML** elements
 - Ensure **accessibility** standards (WCAG 2.1)
 - Test in both **light and dark modes**
-
-### File Organization
-- Keep components in `src/components/`
-- Create new pages in `src/app/`
-- Add utilities in `src/lib/`
-- Place types in `src/types/`
-- Add hooks in `src/hooks/`
 
 ## Pull Request Process
 
