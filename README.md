@@ -106,39 +106,69 @@ SnipShare includes a comprehensive demo system:
 
 ```
 SnipShare/
-├── .env.example              # Environment variables template
-├── .gitignore               # Git ignore rules
-├── README.md                # Project documentation
-├── LICENSE                  # MIT license
-├── CONTRIBUTING.md          # Contribution guidelines
-├── DEMO_FUNCTIONALITY.md    # Demo system documentation
-├── next.config.js           # Next.js configuration
-├── package.json             # Dependencies and scripts
-├── tailwind.config.js       # Tailwind CSS configuration
-├── tsconfig.json            # TypeScript configuration
-├── public/                  # Static assets
-│   ├── favicon.ico
-│   └── images/
-├── src/
-│   ├── app/                 # Next.js App Router
-│   │   ├── globals.css      # Global styles
-│   │   ├── layout.tsx       # Root layout
-│   │   ├── page.tsx         # Home page
-│   │   ├── demo/            # Demo pages
-│   │   ├── admin/           # Admin interface
-│   │   └── api/             # API routes
-│   ├── components/          # Reusable UI components
-│   │   ├── ui/              # Base UI components
-│   │   ├── CodeEditor.tsx   # Monaco editor wrapper
-│   │   ├── Header.tsx       # Navigation header
-│   │   └── ...
-│   ├── lib/                 # Utility functions
-│   │   ├── firebase.js      # Firebase configuration
-│   │   ├── utils.ts         # Helper functions
-│   │   └── ...
-│   ├── hooks/               # Custom React hooks
-│   └── types/               # TypeScript type definitions
-└── docs/                    # Additional documentation
+│
+├── .env.example              # Example environment variables
+├── .gitignore                # Git ignored files
+├── components.json           # Component config
+├── CONTRIBUTING.md           # Contribution guidelines
+├── jsconfig.json             # JS config for path aliases
+├── LICENSE.txt               # Project license
+├── middleware.js             # Next.js middleware
+├── next.config.mjs           # Next.js configuration
+├── package.json              # NPM package file
+├── package-lock.json         # NPM lock file
+├── postcss.config.mjs        # PostCSS config
+├── tailwind.config.js        # Tailwind CSS configuration
+├── README.md                 # Project overview
+│
+├── app/                      # App directory (Next.js routing and pages)
+│   ├── globals.css           # Global styles
+│   ├── layout.js             # Main layout file
+│   ├── page.js               # Homepage
+│   ├── (user)/               # User-related pages
+│   │   ├── layout.jsx
+│   │   ├── edit/[id]/        # Edit snippet page
+│   │   ├── me/               # My profile/snippets
+│   │   └── new/              # Create new snippet
+│   ├── admin/demo/           # Admin demo page
+│   ├── api/demo/             # API route
+│   ├── auth/                 # Auth page
+│   ├── demo/                 # Public demo page
+│   ├── demo-snippets/[id]/   # Demo snippets page
+│   ├── s/[id]/               # Snippet viewer
+│   ├── _components/          # Shared UI components
+│   └── _constants/           # Static config/runcode files
+│
+├── components/               # Reusable UI and layout components
+│   ├── auth/                 # Authentication components
+│   ├── page/                 # Page layout sections
+│   ├── providers/            # Theme/context providers
+│   └── ui/                   # Custom UI components
+│
+├── hooks/                    # Custom React hooks
+│   └── use-media-query.jsx
+│
+├── lib/                      # Firebase and utility libraries
+│   ├── firebase.js
+│   └── utils.js
+│
+├── public/                   # Static assets
+│   ├── bg_gradient.avif
+│   ├── dash-prv.png
+│   └── preview-homepage.png
+│
+├── scripts/                  # Project scripts
+│   ├── createDemoSnippets.js
+│   └── testDemo.js
+│
+├── server_functions/         # Backend functions
+│   ├── createSnippet.js
+│   ├── getUserSnippets.js
+│   └── updateSnippet.js
+│
+└── utils/                    # Utility functions
+    └── current-user.js
+                    
 ```
 
 ## Configuration
