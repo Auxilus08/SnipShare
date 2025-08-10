@@ -9,7 +9,7 @@ import Header from "@/components/page/header";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import { Copy, Loader2, Play, Sparkles, ArrowLeft } from "lucide-react";
+import { Copy, Loader2, Play, Sparkles, ArrowLeft, Share } from "lucide-react";
 import { toast } from "sonner";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { LANGUAGE_CONFIG } from "@/app/_constants/config";
@@ -459,8 +459,10 @@ export default function DemoPage({ params }) {
             <Copy className="h-4 w-4" />
             Copy Code
           </Button>
-          <RainbowButton 
-            disabled={running} 
+          <Button
+            size="sm"
+            variant="outline"
+            disabled={running}
             onClick={() => executeCode(snip)}
             className="flex items-center gap-2"
           >
@@ -472,10 +474,10 @@ export default function DemoPage({ params }) {
             ) : (
               <>
                 <Play className="h-4 w-4" />
-                Run Code
+                Run
               </>
             )}
-          </RainbowButton>
+          </Button>
           <Button
             size="sm"
             variant="outline"
@@ -485,10 +487,7 @@ export default function DemoPage({ params }) {
             }}
             className="flex items-center gap-2"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-4 w-4">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6A2.25 2.25 0 005.25 5.25v6A2.25 2.25 0 007.5 13.5H11" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M18.75 15V18.75A2.25 2.25 0 0116.5 21h-6A2.25 2.25 0 018.25 18.75V15m6 0l-3-3m0 0l-3 3m3-3v6" />
-            </svg>
+            <Share className="h-4 w-4" />
             Share
           </Button>
         </div>
