@@ -22,6 +22,7 @@ import { IoLogoJavascript, IoLogoPython } from "react-icons/io5";
 import { FaJava } from "react-icons/fa";
 import { TbBrandCpp } from "react-icons/tb";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import { MagicCard } from "@/components/magicui/magic-card";
 
 const demoSnippets = [
   {
@@ -99,7 +100,12 @@ export default function DemoPage() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="relative min-h-screen overflow-hidden">
+      <img
+        src="/bg_gradient.avif"
+        alt="background gradient"
+        className="absolute top-0 left-0 w-full h-96 z-[-1]"
+      />
       <Header />
       
       {/* Hero Section */}
@@ -113,8 +119,10 @@ export default function DemoPage() {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            Explore{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="font-geist text-4xl font-medium tracking-tighter bg-gradient-to-r from-zinc-800 via-stone-800/80 to-purple-800/70 dark:from-zinc-100 dark:via-stone-200/50 dark:to-purple-200/70 bg-clip-text text-transparent sm:text-5xl md:text-6xl">
+              Explore
+            </span>{" "}
+            <span className="font-geist text-4xl font-medium tracking-tighter bg-gradient-to-r from-emerald-400 via-sky-400 to-violet-600 bg-clip-text text-transparent sm:text-5xl md:text-6xl">
               SnipShare
             </span>
           </h1>
@@ -154,11 +162,9 @@ export default function DemoPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {demoSnippets.map((snippet, index) => (
-            <Card 
+            <MagicCard
               key={snippet.id}
-              className={`relative overflow-hidden transition-all duration-300 cursor-pointer group ${
-                hoveredCard === index ? 'scale-105 shadow-lg' : 'hover:scale-102'
-              }`}
+              className={`rounded-xl border border-border transition-all duration-300 cursor-pointer ${hoveredCard === index ? 'scale-105 shadow-lg' : 'hover:scale-102'}`}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
@@ -181,7 +187,6 @@ export default function DemoPage() {
                   {snippet.desc}
                 </CardDescription>
               </CardHeader>
-              
               <CardContent className="pt-0">
                 <div className="space-y-3">
                   <div className="flex flex-wrap gap-2">
@@ -192,21 +197,17 @@ export default function DemoPage() {
                       </Badge>
                     ))}
                   </div>
-                  
                   <div className="flex gap-2 pt-2">
-                     <Button asChild className="flex-1">
-                       <Link href={`/demo-snippets/${snippet.id}`}>
-                         <Play className="h-4 w-4 mr-2" />
-                         View Demo
-                       </Link>
-                     </Button>
+                    <Button asChild className="flex-1">
+                      <Link href={`/demo-snippets/${snippet.id}`}>
+                        <Play className="h-4 w-4 mr-2" />
+                        View Demo
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </CardContent>
-              
-              {/* Hover effect overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            </Card>
+            </MagicCard>
           ))}
         </div>
       </div>
@@ -243,10 +244,12 @@ export default function DemoPage() {
             with syntax highlighting and real-time execution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="p-0 border-0 bg-transparent shadow-none">
               <Link href="/auth">
-                Create Your First Snippet
-                <ArrowRight className="h-4 w-4 ml-2" />
+                <RainbowButton className="w-full h-full px-8 py-3 text-lg">
+                  Create Your First Snippet
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </RainbowButton>
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
