@@ -122,7 +122,7 @@ export default function DemoPage() {
             <span className="font-geist text-4xl font-medium tracking-tighter bg-gradient-to-r from-zinc-800 via-stone-800/80 to-purple-800/70 dark:from-zinc-100 dark:via-stone-200/50 dark:to-purple-200/70 bg-clip-text text-transparent sm:text-5xl md:text-6xl">
               Explore
             </span>{" "}
-            <span className="font-geist text-4xl font-medium tracking-tighter bg-gradient-to-r from-emerald-400 via-sky-400 to-violet-600 bg-clip-text text-transparent sm:text-5xl md:text-6xl">
+            <span className="font-geist text-4xl font-medium tracking-tighter bg-gradient-to-r from-violet-600 via-sky-400 to-emerald-400 bg-clip-text text-transparent sm:text-5xl md:text-6xl">
               SnipShare
             </span>
           </h1>
